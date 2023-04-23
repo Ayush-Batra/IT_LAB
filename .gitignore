@@ -1,0 +1,5 @@
+.idea
+.vscode
+recommend/algorithm/
+settings.json
+*.pyc
