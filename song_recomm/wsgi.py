@@ -1,5 +1,5 @@
 """
-WSGI config for movie_recommender project.
+WSGI config for song_recomm project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'movie_recommender.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'song_recomm.settings')
 
 application = get_wsgi_application()

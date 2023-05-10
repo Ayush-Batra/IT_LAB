@@ -4,23 +4,23 @@
 <h2>My List</h2>
 <hr>
 <br>
-<!-- Movie list -->
+<!-- Song list -->
 <div class="row">
-    {% if movies %}
-    {% for movie in movies %}
+    {% if songs %}
+    {% for song in songs %}
         <div class="col-sm-2 col-md-2 ">
             <div class="thumbnail">
-                <h4>{{movie.title}}</h4>
-                <a href="{% url 'detail' movie.id %}">
-                    <img src="{{ movie.movie_logo.url}}" class="img-responsive">
+                <h4>{{song.title}}</h4>
+                <a href="{% url 'detail' song.id %}">
+                    <img src="{{ song.song_logo.url}}" class="img-responsive">
                 </a>
-                <h5>{{movie.genre}}</h5>
+                <h5>{{song.genre}}</h5>
             </div>
         </div>
     {% endfor %}
     {% else %}
         <div class="alert alert-danger">
-            <strong>Sorry!</strong> No movies in your list.
+            <strong>Sorry!</strong> No songs in your list.
         </div>
     {% endif %}
 </div>

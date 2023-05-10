@@ -7,7 +7,7 @@ AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
 AWS_QUERYSTRING_AUTH = True
 
-DEFAULT_FILE_STORAGE = 'movie_recommender.aws.utils.MediaRootS3BotoStorage'
+DEFAULT_FILE_STORAGE = 'song_recomm.aws.utils.MediaRootS3BotoStorage'
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 S3DIRECT_REGION = 'us-east-2'
 AWS_S3_REGION_NAME = 'us-east-2' 

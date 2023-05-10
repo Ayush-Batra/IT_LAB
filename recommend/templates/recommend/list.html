@@ -32,17 +32,17 @@
 <hr>
 <br>
 
-<!-- Movie list -->
+<!-- Song list -->
     <div class="row" >
-            {% if movies %}
-            {% for movie in movies %}
+            {% if songs %}
+            {% for song in songs %}
                 <div class="col-sm-2 col-md-2">
                     <div class="thumbnail" style="border-radius: 22px 22px 22px 22px;">
-                        <center><h5>{{movie.title}}</h5></center>
-                        <a href="{% url 'detail' movie.id %}">
-                            <img src="{{ movie.movie_logo.url}}" class="img-responsive" style="border-radius: 22px 22px 22px 22px;">
+                        <center><h5>{{song.title}}</h5></center>
+                        <a href="{% url 'detail' song.id %}">
+                            <img src="{{ song.song_logo.url}}" class="img-responsive" style="border-radius: 22px 22px 22px 22px;">
                         </a>
-                        <!-- <h5>{{movie.genre}}</h5> -->
+                        <!-- <h5>{{song.genre}}</h5> -->
                     </div>
                 </div>
                 {% endfor %}
