@@ -118,8 +118,8 @@ def recommend(request):
 
 
     movie_rating=pd.DataFrame(list(Myrating.objects.all().values()))
-    print(movie_rating)
     new_user=movie_rating.user_id.unique().shape[0]
+    print(new_user)
     current_user_id= request.user.id
 	# if new user not rated any movie
     if current_user_id>new_user:
@@ -129,6 +129,7 @@ def recommend(request):
 
 
     userRatings = movie_rating.pivot_table(index=['user_id'],columns=['movie_id'],values='rating')
+
     userRatings = userRatings.fillna(0,axis=1)
     corrMatrix = userRatings.corr(method='pearson')
 
